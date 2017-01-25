@@ -7,6 +7,12 @@
       Components for views in place of Backbone.View">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reacttodos.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+      analytics.load("IRGFmV5UuXSpvgmlya6sauALbxa8mvWp");
+      analytics.page();
+      }}();
+    </script>
   </head>
   <body>
     <div id="todoapp"></div>
@@ -31,42 +37,60 @@
     <!-- Use type="text/jsx" so "todos.js" will be compiled by the JSXTransformer
          as JSX syntax -->
     <script src="todos.js" type="text/jsx"></script>
+   <!--   <script>
+      (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+      v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+      o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+      y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/ee5d4d55-aeee-439a-6e44-4bd048b16f69/pendo.js';
+      z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+      // Call this whenever information about your visitors becomes available
+      // Please use Strings, Numbers, or Bools for value types.
+      pendo.initialize({
+        apiKey: 'ee5d4d55-aeee-439a-6e44-4bd048b16f69',
+
+        visitor: {
+          id:              'Rick-test-id'   // Required if user is logged in
+          // email:        // Optional
+          // role:         // Optional
+
+          // You can add any additional visitor level key-values here,
+          // as long as it's not one of the above reserved names.
+        },
+
+        account: {
+           id:           'Rick-account' // Highly recommended
+          // name:         // Optional
+          // planLevel:    // Optional
+          // planPrice:    // Optional
+          // creationDate: // Optional
+
+          // You can add any additional account level key-values here,
+          // as long as it's not one of the above reserved names.
+        }
+      });
+     </script> -->
     <script>
-  // Please use Strings, Numbers, or Bools for value types.
-  window.pendo_options = {
-    apiKey: 'ee5d4d55-aeee-439a-6e44-4bd048b16f69',
+      analytics.identify('Rick_visitor_id_9000', {
+        name: 'Rick Kadlac',
+        email: 'Rick@RickRick.com'
+      });
+      analytics.group("Rick_account_id_9000", {
+        name: "Initech", 
+        industry: "Technology",
+        employees: 329, 
+        plan: "enterprise"
+      });
+    </script>
 
-     // If you load your user info asynchronously, set this to true
-     usePendoAgentAPI: false,
+    
 
-    visitor: {
-      id:              'Rick_Rick'   // Required if user is logged in
-      // email:        // Optional
-      // role:         // Optional
-
-      // You can add any additional visitor level key-values here,
-      // as long as it's not one of the above reserved names.
-    },
-
-    account: {
-       id:           'Ricks_Account_Id' // Highly recommended
-       //name:          'Rick'
-      // planLevel:    // Optional
-      // planPrice:    // Optional
-      // creationDate: // Optional
-
-      // You can add any additional account level key-values here,
-      // as long as it's not one of the above reserved names.
-    }
-  };
-  (function() {
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.async = true;
-      script.src = ('https:' === document.location.protocol ? 'https://' : 'http://' ) + 'd3accju1t3mngt.cloudfront.net/js/pa.min.js';
-      var firstScript = document.getElementsByTagName('script')[0];
-      firstScript.parentNode.insertBefore(script, firstScript);
-  })();
- </script>
   </body>
 </html>
+
+
+
+
+
+
+
